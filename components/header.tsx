@@ -32,14 +32,14 @@ export function Header() {
           >
             Testimonials
           </Link>
-        </div>
-        <div className="w-[200px] flex items-center justify-end gap-6">
           <Link
             href="/#qa"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Q&A
           </Link>
+        </div>
+        <div className="w-[200px] flex items-center justify-end">
           <Link
             href="/book"
             className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"

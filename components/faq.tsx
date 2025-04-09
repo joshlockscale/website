@@ -12,7 +12,7 @@ import { CardContent, Card } from "@/components/ui/card";
 
 export function Faq() {
   return (
-    <section className="relative py-20">
+    <section id="qa" className="relative py-20">
       <div className="container flex flex-col gap-6 items-center">
         <div className="flex flex-col gap-3 items-center">
           <Badge className="gap-1.5 bg-primary/10 text-primary">FAQ</Badge>
@@ -35,7 +35,7 @@ export function Faq() {
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
                     A fully built system that brings in real job calls from people actively looking
-                    for a locksmith near you. It’s designed to run in the background while you focus
+                    for a locksmith near you. It's designed to run in the background while you focus
                     on doing the work.
                   </p>
                 </AccordionContent>
@@ -56,7 +56,7 @@ export function Faq() {
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
-                    Our team will have everything launched for you within a week. You don’t pay for
+                    Our team will have everything launched for you within a week. You don't pay for
                     setup time, and most clients start getting job calls in the first few days after
                     we go live.
                   </p>
@@ -96,7 +96,7 @@ export function Faq() {
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
                     We charge a one-time fee to build, launch, and run everything for you. After
-                    that, the system’s yours - listings, accounts, the whole setup. We’ll explain
+                    that, the system's yours - listings, accounts, the whole setup. We'll explain
                     how it works on the call.
                   </p>
                 </AccordionContent>
@@ -116,7 +116,7 @@ export function Faq() {
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
                     We guarantee 120 real calls from people looking for a locksmith within 3 months.
-                    If those don’t turn into at least 60 jobs (20 per month), we’ll keep working
+                    If those don't turn into at least 60 jobs (20 per month), we'll keep working
                     until you get there at no extra cost.
                   </p>
                 </AccordionContent>
