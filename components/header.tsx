@@ -1,21 +1,7 @@
 "use client";
 
-import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  NavigationMenuLink,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenu,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
-import {
-  MobileNavbarTrigger,
-  MobileNavbarClose,
-  MobileNavbarContent,
-  MobileNavbar,
-} from "@/components/ui/mobile-navbar";
 
 export function Header() {
   return (
