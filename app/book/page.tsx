@@ -3,10 +3,14 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Script from "next/script";
+import Head from "next/head";
 
 export default function BookPage() {
   return (
     <>
+      <Head>
+        <link rel="preload" href="https://assets.calendly.com/assets/external/widget.js" as="script" />
+      </Head>
       <Header />
       <section className="relative py-20">
         <div className="absolute inset-0 size-full -z-10">
@@ -40,7 +44,8 @@ export default function BookPage() {
             />
             <Script
               src="https://assets.calendly.com/assets/external/widget.js"
-              strategy="lazyOnload"
+              strategy="beforeInteractive"
+              async
             />
           </div>
         </div>
