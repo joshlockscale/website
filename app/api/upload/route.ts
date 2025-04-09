@@ -18,7 +18,7 @@ export async function POST(request: Request): Promise<NextResponse> {
     });
 
     return NextResponse.json(blob);
-  } catch (error) {
+  } catch (_) {
     return NextResponse.json(
       { error: 'Error uploading to Blob' },
       { status: 500 }
