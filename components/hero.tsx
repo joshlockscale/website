@@ -76,12 +76,10 @@ export function Hero() {
             Learn More
           </Button>
         </div>
-        <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-6 border-black shadow-lg">
+        <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-4 border-black shadow-lg">
           <video
             className="w-full h-full"
             controls
-            autoPlay
-            muted
             loop
             playsInline
             preload="auto"
