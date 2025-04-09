@@ -86,7 +86,6 @@ export function Hero() {
               title="Lockscale"
             ></iframe>
           </div>
-          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
     </section>
