@@ -32,15 +32,17 @@ export default function BookPage() {
           <div className="absolute inset-0 size-full bg-radial-[at_50%_50%] from-transparent via-background/5 to-background via-70% to-95%" />
         </div>
         <div className="container flex flex-col items-center">
-          <div 
-            className="calendly-inline-widget w-full max-w-4xl rounded-lg overflow-hidden border-4 border-black shadow-lg" 
-            data-url="https://calendly.com/raiaan-lockscale/30min" 
-            style={{ height: "600px" }}
-          />
-          <Script
-            src="https://assets.calendly.com/assets/external/widget.js"
-            strategy="lazyOnload"
-          />
+          <div className="w-full max-w-3xl">
+            <div 
+              className="calendly-inline-widget rounded-lg border border-neutral-800" 
+              data-url="https://calendly.com/raiaan-lockscale/30min" 
+              style={{ height: "650px" }}
+            />
+            <Script
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="lazyOnload"
+            />
+          </div>
         </div>
       </section>
       <Footer />
