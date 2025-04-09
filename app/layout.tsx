@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
+      <body className={cn(inter.className, "min-h-screen bg-background antialiased pt-16")}>
         {children}
       </body>
     </html>

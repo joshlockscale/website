@@ -19,97 +19,32 @@ import {
 
 export function Header() {
   return (
-    <header className="py-4">
-      <div className="container flex items-center justify-between gap-10">
-        <div className="flex-1">
-          <Link href="/" className="flex items-center gap-2">
-            <Image src="/images/logo.png" alt="Lockscale Logo" width={40} height={40} className="mr-0" />
-            <span className="font-heading text-xl font-extrabold">Lockscale</span>
+    <header className="fixed top-0 left-0 right-0 z-50 border-b bg-background/80 backdrop-blur-sm">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/images/logo.png" alt="Lockscale Logo" width={40} height={40} className="mr-0" />
+          <span className="font-heading text-xl font-extrabold">Lockscale</span>
+        </Link>
+        <nav className="flex items-center gap-2">
+          <Link
+            href="/#features"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Features
           </Link>
-        </div>
-        <div className="flex items-center justify-center">
-          <NavigationMenu className="gap-2 hidden md:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="/#about"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
-                >
-                  About
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="/#system"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
-                >
-                  The System
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="/#testimonials"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
-                >
-                  Testimonials
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="/#contact"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
-                >
-                  Contact
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </div>
-        <div className="flex flex-1 items-center justify-end">
-          <div className="hidden md:flex">
-            <Link href="/book">
-              <Button variant="default" size="default">
-                Book a Call
-              </Button>
-            </Link>
-          </div>
-          <MobileNavbar>
-            <MobileNavbarTrigger className="md:hidden">
-              <Icon icon="heroicons:bars-2-solid" className="size-6" />
-            </MobileNavbarTrigger>
-            <MobileNavbarClose className="md:hidden">
-              <Icon icon="lucide:x" className="size-6" />
-            </MobileNavbarClose>
-            <MobileNavbarContent className="backdrop-blur-2xl absolute inset-0 top-[60px] h-[calc(100vh-60px)]">
-              <div className="container py-6">
-                <NavigationMenu className="w-full max-w-none items-stretch flex-col">
-                  <NavigationMenuList className="flex flex-col gap-1 w-full items-start space-x-0">
-                    <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="/#about" className="flex font-medium text-xl p-2">
-                        About
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="/#system" className="flex font-medium text-xl p-2">
-                        The System
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="/#testimonials" className="flex font-medium text-xl p-2">
-                        Testimonials
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="/#contact" className="flex font-medium text-xl p-2">
-                        Contact
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
-            </MobileNavbarContent>
-          </MobileNavbar>
-        </div>
+          <Link
+            href="/#testimonials"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            Testimonials
+          </Link>
+          <Link
+            href="/book"
+            className="ml-4 inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+          >
+            Book a Call
+          </Link>
+        </nav>
       </div>
     </header>
   );
