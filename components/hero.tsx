@@ -77,7 +77,7 @@ export function Hero() {
           </Button>
         </div>
         <div className="relative w-full max-w-4xl mt-4">
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-gray-300 shadow-lg">
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden border-2 border-blue-500 shadow-md">
             <iframe
               src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4"
               className="absolute inset-0 w-full h-full"
