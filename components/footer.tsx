@@ -8,8 +8,8 @@ export function Footer() {
       <div className="container flex items-center justify-between gap-x-10 gap-y-5 flex-wrap">
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <img src="/images/logo.png" alt="Lockscale Logo" className="h-8 w-auto mr-3" />
-            <span className="font-heading text-lg font-extrabold">Lockscale</span>
+            <img src="/images/logo.png" alt="Lockscale Logo" className="h-12 w-auto mr-4" />
+            <span className="font-heading text-xl font-extrabold">Lockscale</span>
           </div>
         </div>
         <div className="w-full md:w-auto order-last md:order-none flex items-center justify-center">
