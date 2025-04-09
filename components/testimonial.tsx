@@ -23,7 +23,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/alex.jpeg"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/alex-N8GUIpRZZeSLdoZgvKld6JXitoeaVc.jpeg"
                     alt="Alex Patsula"
                     className="object-cover"
                   />
@@ -45,7 +45,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/mike.jpg"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/mike-LgLer4ROLb6KZT2HWq0XpaYesXeAFm.jpg"
                     alt="Mike Yat"
                     className="object-cover"
                   />
@@ -67,7 +67,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/varun.jpeg"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/varun-9GLoywaS4E4jVZY6tMn8Iwb1UPT3We.jpeg"
                     alt="Varun Passi"
                     className="object-cover"
                   />
@@ -89,7 +89,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/mark.jpg"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/mark-SW4E3lYvIEaeeu2xcQ5PanWD3Nm4w2.jpg"
                     alt="Mark Verzyl"
                     className="object-cover"
                   />
@@ -111,7 +111,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/hedieh.jpeg"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/hedieh-ZIcntDPFolkM016nIkvvS4f4gRvs93.jpeg"
                     alt="Hedieh Jafar"
                     className="object-cover"
                   />
@@ -133,7 +133,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/terry.png"
+                    src="https://n7xdln6we883c6um.public.blob.vercel-storage.com/terry-WPxhdnATOF7eWRff47ubwXuPCyj5bj.png"
                     alt="Terry Walter"
                     className="object-cover"
                   />
