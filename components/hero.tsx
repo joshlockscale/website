@@ -89,10 +89,8 @@ export function Hero() {
             poster="/images/video-poster.jpg"
             onClick={() => {
               const video = document.getElementById('hero-video') as HTMLVideoElement;
-              if (video && video.paused) {
-                video.currentTime = 0;
+              if (video) {
                 video.muted = false;
-                video.play();
               }
             }}
           >
