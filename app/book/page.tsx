@@ -34,7 +34,7 @@ export default function BookPage() {
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-3xl">
             <div 
-              className="calendly-inline-widget rounded-lg border border-neutral-800" 
+              className="calendly-inline-widget" 
               data-url="https://calendly.com/raiaan-lockscale/30min" 
               style={{ height: "650px" }}
             />
