@@ -11,7 +11,19 @@ export function Header() {
           <Image src="/images/logo.png" alt="Lockscale Logo" width={40} height={40} className="mr-0" />
           <span className="font-heading text-xl font-extrabold">Lockscale</span>
         </Link>
-        <nav className="flex items-center gap-2">
+        <div className="flex-1 flex items-center justify-center gap-8">
+          <Link
+            href="/#about"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            About
+          </Link>
+          <Link
+            href="/#system"
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+          >
+            The System
+          </Link>
           <Link
             href="/#features"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
@@ -24,13 +36,15 @@ export function Header() {
           >
             Testimonials
           </Link>
+        </div>
+        <div className="flex items-center">
           <Link
             href="/book"
-            className="ml-4 inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+            className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
           >
             Book a Call
           </Link>
-        </nav>
+        </div>
       </div>
     </header>
   );
