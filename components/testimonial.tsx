@@ -67,7 +67,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/varun"
+                    src="/images/varun.jpg"
                     alt="Varun Passi"
                     className="object-cover"
                   />
@@ -133,7 +133,7 @@ export function Testimonial() {
               <div className="flex items-center gap-3 flex-col">
                 <Avatar className="size-10">
                   <AvatarImage
-                    src="/images/terry"
+                    src="/images/terry.jpg"
                     alt="Terry Walter"
                     className="object-cover"
                   />
