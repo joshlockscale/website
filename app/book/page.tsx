@@ -2,49 +2,9 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { useEffect } from "react";
-
-interface CalendlyWindow extends Window {
-  Calendly?: {
-    initInlineWidget: (options: {
-      url: string;
-      parentElement: Element | null;
-      height: number;
-    }) => void;
-  };
-}
+import Script from "next/script";
 
 export default function BookPage() {
-  useEffect(() => {
-    const loadCalendly = () => {
-      const script = document.createElement('script');
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      document.body.appendChild(script);
-
-      script.onload = () => {
-        const calendlyWindow = window as CalendlyWindow;
-        if (calendlyWindow.Calendly) {
-          calendlyWindow.Calendly.initInlineWidget({
-            url: 'https://calendly.com/raiaan-lockscale/30min',
-            parentElement: document.querySelector('.calendly-inline-widget'),
-            height: 700
-          });
-        }
-      };
-    };
-
-    loadCalendly();
-
-    return () => {
-      // Cleanup Calendly on unmount
-      const scripts = document.querySelectorAll('script[src="https://assets.calendly.com/assets/external/widget.js"]');
-      scripts.forEach(script => script.remove());
-      const calendlyElements = document.querySelectorAll('.calendly-inline-widget > *');
-      calendlyElements.forEach(element => element.remove());
-    };
-  }, []);
-
   return (
     <>
       <Header />
@@ -73,10 +33,18 @@ export default function BookPage() {
         </div>
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-3xl">
-            <div className="calendly-inline-widget" style={{ minWidth: "320px", height: "700px" }} />
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/raiaan-lockscale/30min"
+              style={{ minWidth: "320px", height: "700px" }}
+            />
           </div>
         </div>
       </section>
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="beforeInteractive"
+      />
       <Footer />
     </>
   );
