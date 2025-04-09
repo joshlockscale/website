@@ -78,12 +78,23 @@ export function Hero() {
         </div>
         <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-4 border-black shadow-lg">
           <video
+            id="hero-video"
             className="w-full h-full"
             controls
+            autoPlay
+            muted
             loop
             playsInline
             preload="auto"
             poster="/images/video-poster.jpg"
+            onClick={() => {
+              const video = document.getElementById('hero-video') as HTMLVideoElement;
+              if (video) {
+                video.currentTime = 0;
+                video.muted = false;
+                video.play();
+              }
+            }}
           >
             <source src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4" type="video/mp4" />
             Your browser does not support the video tag.
