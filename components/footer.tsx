@@ -19,21 +19,11 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-1 items-center justify-end gap-2">
-          <a href="https://www.facebook.com/Lockcale">
-            <Icon icon="mdi:facebook" className="size-5" />
-          </a>
-          <a href="https://twitter.com/Lockcale">
-            <Icon icon="mdi:twitter" className="size-5" />
-          </a>
-          <a href="https://www.instagram.com/Lockcale">
-            <Icon icon="mdi:instagram" className="size-5" />
-          </a>
-          <a href="https://www.linkedin.com/company/Lockcale">
-            <Icon icon="mdi:linkedin" className="size-5" />
-          </a>
-          <a href="https://www.youtube.com/Lockcale">
-            <Icon icon="mdi:youtube" className="size-5" />
-          </a>
+          <Icon icon="mdi:facebook" className="size-5" />
+          <Icon icon="mdi:twitter" className="size-5" />
+          <Icon icon="mdi:instagram" className="size-5" />
+          <Icon icon="mdi:linkedin" className="size-5" />
+          <Icon icon="mdi:youtube" className="size-5" />
         </div>
       </div>
     </footer>
