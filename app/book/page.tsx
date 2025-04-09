@@ -2,7 +2,6 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import Script from "next/script";
 import { useEffect } from "react";
 
 export default function BookPage() {
