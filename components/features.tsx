@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react";
 
 export function Features() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-20" id="system">
       <div className="container flex flex-col gap-6 items-center">
         <div className="flex flex-col gap-3 items-center">
           <Badge className="gap-1.5 bg-primary/10 text-primary">The System</Badge>
@@ -25,7 +25,7 @@ export function Features() {
             <div className="flex flex-col gap-1">
               <h3 className="font-semibold text-lg">Top-of-Google Placement</h3>
               <p className="text-muted-foreground text-base">
-                Your business will show up first when someone’s locked out and searching for help
+                Your business will show up first when someone's locked out and searching for help
               </p>
             </div>
           </div>

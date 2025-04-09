@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative py-20" id="about">
+    <section className="relative pt-32 pb-20" id="about">
       <div className="absolute inset-0 size-full -z-10">
         <svg
           aria-hidden="true"
@@ -75,9 +75,11 @@ export function Hero() {
               🗓️ Book a Call
             </Button>
           </Link>
-          <Button variant="secondary" size="default">
-            Learn More
-          </Button>
+          <Link href="/book">
+            <Button variant="secondary" size="default">
+              Learn More
+            </Button>
+          </Link>
         </div>
         <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-4 border-black shadow-lg">
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>

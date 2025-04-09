@@ -6,7 +6,7 @@ import { CardContent, Card } from "@/components/ui/card";
 
 export function Testimonial() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-20" id="testimonials">
       <div className="container flex flex-col gap-6 items-center">
         <div className="flex flex-col gap-3 items-center">
           <Badge className="gap-1.5 bg-primary/10 text-primary">Client Success</Badge>
