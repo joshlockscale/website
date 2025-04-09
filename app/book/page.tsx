@@ -3,8 +3,30 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Script from "next/script";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (options: {
+        url: string;
+        parentElement: Element | null;
+      }) => void;
+    };
+  }
+}
 
 export default function BookPage() {
+  useEffect(() => {
+    // Ensure Calendly widget is initialized when component mounts
+    if (typeof window.Calendly !== 'undefined') {
+      window.Calendly.initInlineWidget({
+        url: 'https://calendly.com/raiaan-lockscale/30min',
+        parentElement: document.querySelector('.calendly-inline-widget'),
+      });
+    }
+  }, []);
+
   return (
     <>
       <Header />
@@ -34,11 +56,21 @@ export default function BookPage() {
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-3xl">
             <div 
-              className="calendly-inline-widget" 
-              data-url="https://calendly.com/raiaan-lockscale/30min"
+              className="calendly-inline-widget"
               style={{ position: "relative", minWidth: "320px", height: "700px" }}
             />
-            <Script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
+            <Script 
+              src="https://assets.calendly.com/assets/external/widget.js"
+              strategy="afterInteractive"
+              onLoad={() => {
+                if (typeof window.Calendly !== 'undefined') {
+                  window.Calendly.initInlineWidget({
+                    url: 'https://calendly.com/raiaan-lockscale/30min',
+                    parentElement: document.querySelector('.calendly-inline-widget'),
+                  });
+                }
+              }}
+            />
           </div>
         </div>
       </section>
