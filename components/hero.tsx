@@ -4,8 +4,6 @@ import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Icon } from "@iconify/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import placeholder from "@/public/images/placeholder.png";
 
 export function Hero() {
   return (
@@ -78,11 +76,16 @@ export function Hero() {
             Learn More
           </Button>
         </div>
-        <Image
-          src={placeholder}
-          alt="placeholder Image"
-          className="rounded-md mt-4 max-w-4xl w-full"
-        />
+        <div className="relative w-full max-w-4xl mt-4">
+          <div className="relative w-full aspect-video rounded-lg overflow-hidden">
+            <iframe
+              src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4"
+              className="absolute inset-0 w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
