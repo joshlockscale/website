@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   NavigationMenuLink,
   NavigationMenuItem,
@@ -21,17 +22,17 @@ export function Header() {
     <header className="py-4">
       <div className="container flex items-center justify-between gap-10">
         <div className="flex-1">
-          <div className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <Image src="/images/logo.png" alt="Lockscale Logo" width={40} height={40} className="mr-0" />
             <span className="font-heading text-xl font-extrabold">Lockscale</span>
-          </div>
+          </Link>
         </div>
         <div className="flex items-center justify-center">
           <NavigationMenu className="gap-2 hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="/#about"
                   className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
                 >
                   About
@@ -39,7 +40,7 @@ export function Header() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="/#system"
                   className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
                 >
                   The System
@@ -47,7 +48,7 @@ export function Header() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="/#testimonials"
                   className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
                 >
                   Testimonials
@@ -55,7 +56,7 @@ export function Header() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#"
+                  href="/#contact"
                   className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
                 >
                   Contact
@@ -66,9 +67,11 @@ export function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end">
           <div className="hidden md:flex">
-            <Button variant="default" size="default">
-              Book a Call
-            </Button>
+            <Link href="/book">
+              <Button variant="default" size="default">
+                Book a Call
+              </Button>
+            </Link>
           </div>
           <MobileNavbar>
             <MobileNavbarTrigger className="md:hidden">
@@ -82,22 +85,22 @@ export function Header() {
                 <NavigationMenu className="w-full max-w-none items-stretch flex-col">
                   <NavigationMenuList className="flex flex-col gap-1 w-full items-start space-x-0">
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#" className="flex font-medium text-xl p-2">
+                      <NavigationMenuLink href="/#about" className="flex font-medium text-xl p-2">
                         About
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#" className="flex font-medium text-xl p-2">
-                        Pricing
+                      <NavigationMenuLink href="/#system" className="flex font-medium text-xl p-2">
+                        The System
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#" className="flex font-medium text-xl p-2">
+                      <NavigationMenuLink href="/#testimonials" className="flex font-medium text-xl p-2">
                         Testimonials
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#" className="flex font-medium text-xl p-2">
+                      <NavigationMenuLink href="/#contact" className="flex font-medium text-xl p-2">
                         Contact
                       </NavigationMenuLink>
                     </NavigationMenuItem>

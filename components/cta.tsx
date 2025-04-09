@@ -1,10 +1,11 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Cta() {
   return (
-    <section className="relative py-36">
+    <section className="relative py-36" id="contact">
       <div className="container flex flex-col gap-10 md:flex-row items-center justify-between">
         <div className="flex flex-col gap-2">
           <h2 className="font-heading font-bold text-3xl sm:text-4xl max-w-2xl text-balance">
@@ -16,9 +17,11 @@ export function Cta() {
           </p>
         </div>
         <div>
-          <Button variant="default" size="default">
-            🗓️ Book a Call
-          </Button>
+          <Link href="/book">
+            <Button variant="default" size="default">
+              🗓️ Book a Call
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

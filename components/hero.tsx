@@ -4,10 +4,11 @@ import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar";
 import { Icon } from "@iconify/react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-20" id="about">
       <div className="absolute inset-0 size-full -z-10">
         <svg
           aria-hidden="true"
@@ -69,9 +70,11 @@ export function Hero() {
           jobs for you, on autopilot.
         </p>
         <div className="flex gap-2">
-          <Button variant="default" size="default">
-            🗓️ Book a Call
-          </Button>
+          <Link href="/book">
+            <Button variant="default" size="default">
+              🗓️ Book a Call
+            </Button>
+          </Link>
           <Button variant="secondary" size="default">
             Learn More
           </Button>
