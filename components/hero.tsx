@@ -76,15 +76,20 @@ export function Hero() {
             Learn More
           </Button>
         </div>
-        <div className="relative w-full max-w-4xl mt-4">
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden border-2 border-blue-500 shadow-md">
-            <iframe
-              src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4"
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+        <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-4 border-gray-400 shadow-lg">
+          <video
+            className="w-full h-full"
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/images/video-poster.jpg"
+          >
+            <source src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </section>
