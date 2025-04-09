@@ -3,8 +3,21 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import Script from "next/script";
+import { useEffect } from "react";
 
 export default function BookPage() {
+  useEffect(() => {
+    // Force reload Calendly widget on mount
+    const script = document.createElement('script');
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <>
       <Header />
@@ -38,7 +51,6 @@ export default function BookPage() {
               data-url="https://calendly.com/raiaan-lockscale/30min"
               style={{ minWidth: "320px", height: "700px" }}
             />
-            <Script src="https://assets.calendly.com/assets/external/widget.js" />
           </div>
         </div>
       </section>
