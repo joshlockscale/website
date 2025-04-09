@@ -2,15 +2,40 @@
 
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import Script from "next/script";
-import Head from "next/head";
+import { useEffect } from "react";
 
 export default function BookPage() {
+  useEffect(() => {
+    const loadCalendly = () => {
+      const script = document.createElement('script');
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        if ((window as any).Calendly) {
+          (window as any).Calendly.initInlineWidget({
+            url: 'https://calendly.com/raiaan-lockscale/30min',
+            parentElement: document.querySelector('.calendly-inline-widget'),
+            height: 700
+          });
+        }
+      };
+    };
+
+    loadCalendly();
+
+    return () => {
+      // Cleanup Calendly on unmount
+      const scripts = document.querySelectorAll('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      scripts.forEach(script => script.remove());
+      const calendlyElements = document.querySelectorAll('.calendly-inline-widget > *');
+      calendlyElements.forEach(element => element.remove());
+    };
+  }, []);
+
   return (
     <>
-      <Head>
-        <link rel="preload" href="https://assets.calendly.com/assets/external/widget.js" as="script" />
-      </Head>
       <Header />
       <section className="relative py-20">
         <div className="absolute inset-0 size-full -z-10">
@@ -37,18 +62,10 @@ export default function BookPage() {
         </div>
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-3xl">
-            <div 
-              className="calendly-inline-widget" 
-              data-url="https://calendly.com/raiaan-lockscale/30min" 
-              style={{ minWidth: "320px", height: "700px" }}
-            />
+            <div className="calendly-inline-widget" style={{ minWidth: "320px", height: "700px" }} />
           </div>
         </div>
       </section>
-      <Script
-        src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="afterInteractive"
-      />
       <Footer />
     </>
   );
