@@ -4,6 +4,16 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { useEffect } from "react";
 
+interface CalendlyWindow extends Window {
+  Calendly?: {
+    initInlineWidget: (options: {
+      url: string;
+      parentElement: Element | null;
+      height: number;
+    }) => void;
+  };
+}
+
 export default function BookPage() {
   useEffect(() => {
     const loadCalendly = () => {
@@ -13,8 +23,9 @@ export default function BookPage() {
       document.body.appendChild(script);
 
       script.onload = () => {
-        if ((window as any).Calendly) {
-          (window as any).Calendly.initInlineWidget({
+        const calendlyWindow = window as CalendlyWindow;
+        if (calendlyWindow.Calendly) {
+          calendlyWindow.Calendly.initInlineWidget({
             url: 'https://calendly.com/raiaan-lockscale/30min',
             parentElement: document.querySelector('.calendly-inline-widget'),
             height: 700
