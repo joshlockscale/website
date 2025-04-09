@@ -8,29 +8,41 @@ export default function BookPage() {
   return (
     <>
       <Header />
-      <main>
-        <section className="relative overflow-hidden bg-gradient-to-b from-neutral-950 to-neutral-900">
-          <div className="container relative z-10 mx-auto px-6 py-32 md:px-8">
-            <div className="mx-auto max-w-4xl text-center">
-              <h1 className="font-heading text-4xl font-bold md:text-6xl">Book Your Call</h1>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Schedule your 30-minute intro call to discuss how we can help you get more locksmith jobs.
-              </p>
-            </div>
-            <div className="mt-16">
-              <div 
-                className="calendly-inline-widget mx-auto rounded-lg bg-card" 
-                data-url="https://calendly.com/raiaan-lockscale/30min" 
-                style={{ minWidth: "320px", height: "700px" }}
-              />
-              <Script
-                src="https://assets.calendly.com/assets/external/widget.js"
-                strategy="lazyOnload"
-              />
-            </div>
-          </div>
-        </section>
-      </main>
+      <section className="relative py-20">
+        <div className="absolute inset-0 size-full -z-10">
+          <svg
+            aria-hidden="true"
+            className="fill-foreground/15 pointer-events-none absolute inset-0 size-full -z-10"
+          >
+            <defs>
+              <pattern
+                id="dot-pattern"
+                width="25"
+                height="25"
+                patternUnits="userSpaceOnUse"
+                patternContentUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+              >
+                <circle id="pattern-circle" cx="10" cy="10" r="1.25" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" strokeWidth="0" fill="url(#dot-pattern)" />
+          </svg>
+          <div className="absolute inset-0 size-full bg-radial-[at_50%_50%] from-transparent via-background/5 to-background via-70% to-95%" />
+        </div>
+        <div className="container flex flex-col items-center">
+          <div 
+            className="calendly-inline-widget w-full max-w-4xl rounded-lg overflow-hidden border-4 border-black shadow-lg" 
+            data-url="https://calendly.com/raiaan-lockscale/30min" 
+            style={{ height: "600px" }}
+          />
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="lazyOnload"
+          />
+        </div>
+      </section>
       <Footer />
     </>
   );
