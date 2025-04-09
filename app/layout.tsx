@@ -7,7 +7,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Lockscale",
-  description: "Get 20 Lockout Jobs in 30 Days — Guaranteed",
+  description: "Lockscale - Professional Locksmith Services. Get 20 Lockout Jobs in 30 Days — Guaranteed. Expert locksmith training and business growth solutions.",
+  openGraph: {
+    title: "Lockscale",
+    description: "Lockscale - Professional Locksmith Services. Get 20 Lockout Jobs in 30 Days — Guaranteed.",
+    images: ['/images/logo.png'],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lockscale",
+    description: "Lockscale - Professional Locksmith Services. Get 20 Lockout Jobs in 30 Days — Guaranteed.",
+    images: ['/images/logo.png'],
+  },
 };
 
 export default function RootLayout({
