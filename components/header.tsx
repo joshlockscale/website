@@ -21,11 +21,8 @@ export function Header() {
       <div className="container flex items-center justify-between gap-10">
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <Icon
-              icon="solar:bolt-circle-bold-duotone"
-              className="text-primary size-7 [&>path:first-child]:opacity-100 [&>path:last-child]:fill-white rounded-full"
-            />
-            <span className="font-heading text-xl font-extrabold">Logo</span>
+            <img src="/images/finallogo.png" alt="Lockscale Logo" className="h-8 w-auto" />
+            <span className="font-heading text-xl font-extrabold">Lockscale</span>
           </div>
         </div>
         <div className="flex items-center justify-center">
