@@ -77,28 +77,16 @@ export function Hero() {
           </Button>
         </div>
         <div className="relative w-full max-w-4xl mt-4 rounded-lg overflow-hidden border-4 border-black shadow-lg">
-          <video
-            id="hero-video"
-            className="w-full h-full"
-            controls
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            poster="/images/video-poster.jpg"
-            onClick={() => {
-              const video = document.getElementById('hero-video') as HTMLVideoElement;
-              if (video && video.currentTime === 0) {
-                video.currentTime = 0;
-                video.muted = false;
-                video.play();
-              }
-            }}
-          >
-            <source src="https://81jkcsdgmt5mmogx.public.blob.vercel-storage.com/vsl-OUMvFvOx4Qi4Hn5vzvejvixnFK7AzW.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+            <iframe
+              src="https://player.vimeo.com/video/1074049253?h=94a7867817&badge=0&autopause=0&player_id=0&app_id=58479"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+              title="Lockscale"
+            ></iframe>
+          </div>
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
       </div>
     </section>
