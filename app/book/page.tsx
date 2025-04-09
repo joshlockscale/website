@@ -40,16 +40,15 @@ export default function BookPage() {
             <div 
               className="calendly-inline-widget" 
               data-url="https://calendly.com/raiaan-lockscale/30min" 
-              style={{ height: "650px" }}
-            />
-            <Script
-              src="https://assets.calendly.com/assets/external/widget.js"
-              strategy="beforeInteractive"
-              async
+              style={{ minWidth: "320px", height: "700px" }}
             />
           </div>
         </div>
       </section>
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="afterInteractive"
+      />
       <Footer />
     </>
   );

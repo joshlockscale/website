@@ -21,7 +21,11 @@ export default function RootLayout({
         <link
           rel="preconnect"
           href="https://assets.calendly.com"
-          crossOrigin="anonymous"
+          crossOrigin=""
+        />
+        <link 
+          rel="dns-prefetch" 
+          href="https://assets.calendly.com"
         />
       </head>
       <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
