@@ -18,31 +18,35 @@ export function Header() {
           </Link>
         </div>
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 items-center justify-center gap-8">
-          <Link
-            href="/#about"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            About
-          </Link>
-          <Link
-            href="/#system"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            The System
-          </Link>
-          <Link
-            href="/#testimonials"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Testimonials
-          </Link>
-          <Link
-            href="/#qa"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Q&A
-          </Link>
+        <div className="hidden md:flex flex-1 items-center">
+          <div className="flex-1 flex items-center justify-center gap-8">
+            <Link
+              href="/#about"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              About
+            </Link>
+            <Link
+              href="/#system"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              The System
+            </Link>
+            <Link
+              href="/#testimonials"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Testimonials
+            </Link>
+          </div>
+          <div className="flex items-center justify-end gap-8 mr-8">
+            <Link
+              href="/#qa"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Q&A
+            </Link>
+          </div>
         </div>
         <div className="flex flex-1 md:w-[200px] items-center justify-end">
           <button 
